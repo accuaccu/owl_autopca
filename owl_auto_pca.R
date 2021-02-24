@@ -1,4 +1,4 @@
-ow.pca <- function(X, hero, alpha) {
+ow.pca <- function(X, hero, alpha, statistic) {
   require(tidyverse)
   require(DescTools)
   D_mains <- X %>%
@@ -14,7 +14,7 @@ ow.pca <- function(X, hero, alpha) {
   # Yields error, dev version could solve that; does not affect calculus though
   B <- X %>%
     group_by(hero_name, player_name, stat_name) %>%
-    summarise(median = median(stat_amount)) %>%
+    summarise(statistic_name = statistic(stat_amount)) %>%
     filter(hero_name == hero, player_name %in% main_players) %>%
     arrange(stat_name)
   
