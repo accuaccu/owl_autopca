@@ -22,7 +22,7 @@ ow.pca <- function(X, hero, alpha, statistic) {
   
   
   # Test for normality
-  normal_test <- tapply(B$median, B$stat_name, function(x) JarqueBeraTest(x)$p.value) < alpha
+  normal_test <- tapply(B$statistic_name, B$stat_name, function(x) JarqueBeraTest(x)$p.value) < alpha
   normal_covariates <- names(normal_test[normal_test == T])
   
   # Reduce data; remove non-normal
@@ -33,7 +33,7 @@ ow.pca <- function(X, hero, alpha, statistic) {
   
   # Re-arrange table; wide format
   E <- C[,-1] %>% 
-    pivot_wider(names_from = stat_name, values_from = median)
+    pivot_wider(names_from = stat_name, values_from = statistic_name)
   
   G <- as.data.frame(E)
   
