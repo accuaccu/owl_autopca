@@ -1,4 +1,6 @@
 ow.pca <- function(X, hero, alpha) {
+  require(tidyverse)
+  require(DescTools)
   D_mains <- X %>%
     group_by(hero_name, player_name, stat_name) %>%
     filter(hero_name == hero, stat_name == 'Time Played') %>%
