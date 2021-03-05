@@ -10,8 +10,8 @@ alpha = confidence level for Jarque-Bera normality test; 0.05 would be quite a r
 statistic = how to aggregate statistics over the dataset, e.g., median, mean, sum, max, min, IQR, sd, would be 'appropriate' choices
 
 The function performs:
-1. Aggregates the data
-2. Does a normality test; reduces the data such that only normally distributed covariates are passed forward
+1. Aggregates the data, based on the argument 'statistic'
+2. Does a normality test; reduces, based on argument 'alpha', the data such that only normally distributed covariates are passed forward
 3. Does principal component analysis
 4. Defines outliers in first two principal components using Tukey's definition (as in boxplot default)
 
