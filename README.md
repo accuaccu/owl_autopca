@@ -1,7 +1,7 @@
 # owl_autopca
 Automated principal component analysis for overwatch league official data
 
-The function requires data from source: https://assets.blz-contentstack.com/v3/assets/blt321317473c90505c/blt9c4758838b4aa467/5f850357dd835814abdf5e6d/phs_2020.zip (no API available at the time of writing this 5th of March 2021)
+The function requires data from source: https://assets.blz-contentstack.com/v3/assets/blt321317473c90505c/blt9c4758838b4aa467/5f850357dd835814abdf5e6d/phs_2020.zip (no API available at the time of writing this in 5th of March 2021)
 
 The function requires input:
 X = data, as downloaded from the link, (as .CSV)
