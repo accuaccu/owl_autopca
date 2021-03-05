@@ -18,3 +18,5 @@ The function performs:
 The function outputs:
 1. Plots first two principal components and prinicpal component loadings for easier interpretation
 2. Highlight the outliers and indicates 'their' player names
+
+This type of approach could potentially be used to detect anomalies in FPS games in general, for example, in anti-cheat applications.
